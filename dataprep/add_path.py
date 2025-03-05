@@ -1,7 +1,7 @@
 import os
 import json 
 
-file_path = os.path.abspath('archive/WLASL_v0.3.json')  
+file_path = os.path.abspath('Grad-Proj/dataprep/WLASL_v0.3.json')  
 vid_dir = os.path.abspath('archive/videos')  
 
 with open(file_path, 'r') as json_file:
