@@ -1,7 +1,7 @@
 import json
 import cv2
 
-file_path = 'archive/WLASL_v0.3.json'
+file_path = 'dataprep/WLASL_v0.3.json'
 
 def get_framecount (vid_path):
     print('frame count processing')
