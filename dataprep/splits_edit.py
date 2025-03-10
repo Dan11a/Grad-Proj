@@ -2,7 +2,7 @@ import os
 import json
 import random
 
-file_path = os.path.abspath('dataprep/WLASL_v0.3.json')  
+file_path = os.path.abspath('WLASL_v0.3.json')  
 
 with open(file_path, "r") as json_file:
     metadata = json.load(json_file)
