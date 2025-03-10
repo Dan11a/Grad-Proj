@@ -1,29 +1,20 @@
 import json
 
-file_path = 'updated_metadata.json'
+def count(json_path):
+    with open(json_path, "r") as f:
+        data = json.load(f)
 
-with open(file_path) as ipf:
-    content = json.load(ipf)
+    unique_glosses = set(entry["gloss"] for entry in data)
+    return len(unique_glosses)
 
-cnt_train = 0
-cnt_val = 0
-cnt_test = 0
+train_path = 'WLASL_v0.4_train.json'
+val_path = 'WLASL_v0.4_val.json'
+test_path = 'WLASL_v0.4_test.json'
 
-for ent in content:
-    gloss = ent['gloss']
+train_unique = count(train_path)
+val_unique = count(val_path)
+test_unique = count(test_path)
 
-    for inst in ent['instances']:
-        split = inst['split']
-
-        if split == 'train':
-            cnt_train += 1
-        elif split == 'val':
-            cnt_val += 1
-        elif split == 'test':
-            cnt_test += 1
-        else:
-            raise ValueError("Invalid split.")
-
-print('total glosses: {}'.format(len(content)))
-print('total samples: {}'.format(cnt_train + cnt_val + cnt_test))
-print(f"train = {cnt_train} \nval = {cnt_val} \ntest = {cnt_test}")
+print(f"Unique glosses in Train: {train_unique}")
+print(f"Unique glosses in Val: {val_unique}")
+print(f"Unique glosses in Test: {test_unique}")
