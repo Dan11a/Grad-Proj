@@ -1,0 +1,10 @@
+->first I ran add_path file to add the path for each video in the archive to the instance entry inside the WLASL_v0.3 file.
+->then I ran del_missing to delete all the vidoe instances insdie WLASL_v0.3 without a path (meaning the video doesn't exist in the archive)
+->after deleting missing video instance I added a 'frame_count' attribute to the existing videos by add_framecount
+->after that i redefiened the splits making sure every gloss has at least one test split  and one validation split by running splits_edit 
+  and saved the outcome file as split_data
+->then I ran work_data to reshape the structure of the json file and saved it as WLASL_v0.4
+-> lastly I created 3 json files, one conatining the trainig instance, and one for the test and one for validation by running split_file for easier managment
+    Unique glosses in Train: 2000
+    Unique glosses in Val: 1986
+    Unique glosses in Test: 2000
