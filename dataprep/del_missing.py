@@ -1,6 +1,6 @@
 import json
 
-file_path = 'dataprep/WLASL_v0.3.json'
+file_path = 'WLASL_v0.3.json'
 
 with open(file_path, 'r') as json_file:
     metadata = json.load(json_file)
