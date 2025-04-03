@@ -2,5 +2,7 @@
     (the folder is too large to upload it on github)
 ->Secondly I compressed all keypoints for each video in a single comressed numpy file as a ditionary with the index asan ID used for the key and 
     the keypoints as value. (the files were saved as landmarks_train/test/val.pz)
+    -> had to change the shape of the np array from (233, 179 ,3) to (233, 537) with flatten.py, this was done so that the shape wold work with the lstm
+    these files were saved with ' v02 ' at the end and they are the files we will use 
 ->Third I created another compressed file to map the ID from the landmarks files to the gloss, ID as key and gloss as value.
     (the files were saved as labels_train/test/val.pz)

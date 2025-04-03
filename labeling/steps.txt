@@ -1,0 +1,2 @@
+-> used label encoding scikit learn to turn the words from string to numerical values for the lstm model and saved the map in a json file (ran by label_encoding.py)
+-> encoded the labels files using the map created and saved them (done by labeling.py)
